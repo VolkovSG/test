@@ -76,7 +76,7 @@ if (null !== $username || null !== $password) {
 			</div>
 			<div class="convert_item">
 				Из 
-			    <select id="cur1">
+			    <select id="valutein">
 			    	<option value='1'>Российский рубль</option>
 			    	<?php 
 			    	foreach ($valutes->Valute as $valute) {
@@ -86,7 +86,7 @@ if (null !== $username || null !== $password) {
 			</div>
 			<div class="convert_item">
 				В 
-			    <select id="cur2">
+			    <select id="valuteout">
 			    	<option value='1'>Российский рубль</option>
 			    	<?php 
 			    	foreach ($valutes->Valute as $valute) {
@@ -101,8 +101,8 @@ if (null !== $username || null !== $password) {
   		<script>
   			window.onload = function () {
 			    let val = document.getElementById('val');
-			    let valutein = document.getElementById('cur1');
-			    let valuteout = document.getElementById('cur2');
+			    let valutein = document.getElementById('valutein');
+			    let valuteout = document.getElementById('valuteout');
 			    let result = document.getElementById('result');
 			    function convert() {
 			        if(valutein.value === valuteout.value){
